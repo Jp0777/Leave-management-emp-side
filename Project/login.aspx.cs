@@ -33,7 +33,7 @@ namespace Project
                 {
                 if(Email.Text=="Admin@gmail.com" && Password.Text=="Admin@123")
                 {
-                    Response.Write("Hello");
+                    Response.Redirect("DashBoard-Admin.aspx");
                 }
                     SqlCommand cmd = new SqlCommand("select  count(*) from EmpInfo where email='" + Email.Text + "' and pass='" + Password.Text + "'", con);
                     con.Open();

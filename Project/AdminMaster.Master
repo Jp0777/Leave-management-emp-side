@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.Master.cs" Inherits="LeaveMangaement.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Styles/sidebar.css" runat="server" rel="stylesheet" type="text/css" />
+    <script>
+        function fun() {
+            color: "#0082e6";
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server" class="">
+       <nav class="navbar navbar-dark  sticky-top navbar-expand-lg " style="z-index: 0;
+            background-color: #0082e6">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Leave ManageMent</a>
+            </div>
+        </nav>
+
+
+        <div id="sidebar" class="bg-dark">
+            <ul>
+                <li>&nbsp;<img src="https://img.icons8.com/pastel-glyph/64/4a90e2/user-male--v1.png"
+                    style="width: 45px;" />&nbsp;<asp:HyperLink ID="h1" runat="server" NavigateUrl="~/DashBoard-Admin.aspx"
+                        Text="Dashboard"></asp:HyperLink></li>
+                <li>
+                    <img src="https://img.icons8.com/dusk/50/000000/leave.png" />&nbsp;<asp:HyperLink
+                        ID="HyperLink1" runat="server" NavigateUrl="~/leaves-list-admin.aspx" Text="Manage Leave"></asp:HyperLink>
+                </li>
+                <li>
+                    <img src="https://img.icons8.com/dusk/50/000000/leave.png" />&nbsp;Leave Type
+               
+                    <asp:Panel Visible="true" ID="Panel1" runat="server" CssClass="mr-auto">
+            
+                    
+                        <asp:HyperLink   ID="pendingURL" runat="server" NavigateUrl="~/pending-list.aspx" >Pending </asp:HyperLink><br />
+                   
+                        <asp:HyperLink  ID="approvedURL" runat="server" NavigateUrl="~/Approved-list.aspx">Approved</asp:HyperLink><br />
+             
+         
+                         <asp:HyperLink  ID="deniedURL" runat="server" NavigateUrl="~/Denied-list.aspx">Denied</asp:HyperLink>
+                  
+                
+
+            </asp:Panel>
+                </li>
+                <li>&nbsp;<img src="Images/logout.png" style="width: 40px;"><asp:Button ID="b1" runat="server"
+                    Text="Log Out" OnClick="b1_Click" CausesValidation="false" CssClass="btn btn-lg bg-dark"
+                    Style="color: white;" OnHover="fun()" /></li>
+            </ul>
+
+        </div>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

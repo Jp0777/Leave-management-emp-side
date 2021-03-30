@@ -35,7 +35,8 @@ namespace Project
             {
                 Response.Redirect("login.aspx");
             }
-           
+
+                string leaveid = Guid.NewGuid().ToString("N");
                 string id = Session["user"].ToString();
                 string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
@@ -52,13 +53,14 @@ namespace Project
                 }
                 else
                 {
-                    cmd.CommandText = "insert into EmpLeave values(@id,@from,@to,@desc,@type,@status)";
+                    cmd.CommandText = "insert into EmpLeave values(@id,@from,@to,@desc,@type,@status,@leaveid)";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@from", From.Text);
                     cmd.Parameters.AddWithValue("@to", To.Text);
                     cmd.Parameters.AddWithValue("@desc", desc.Text);
                     cmd.Parameters.AddWithValue("@status", "Pending For Approval");
                     cmd.Parameters.AddWithValue("@type", DropDownList1.SelectedValue);
+                    cmd.Parameters.AddWithValue("@leaveid", leaveid);
                     try
                     {
                         cmd.ExecuteNonQuery();
