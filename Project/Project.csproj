@@ -86,7 +86,7 @@
     <Content Include="Images\xyz.jpg" />
     <Content Include="leaves-list-admin.aspx" />
     <Content Include="Leave_history.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="pending-list.aspx" />
     <Content Include="profile.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -269,12 +269,12 @@
     <Compile Include="Leave_history.aspx.designer.cs">
       <DependentUpon>Leave_history.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="pending-list.aspx.cs">
       <DependentUpon>pending-list.aspx</DependentUpon>

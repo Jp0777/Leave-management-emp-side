@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 namespace Project
 {
@@ -15,15 +17,16 @@ namespace Project
 
         }
 
-        protected void b1_Click(object sender, EventArgs e)
+        [System.Web.Services.WebMethod]
+        public  void i1_Click(object sender, EventArgs e)
         {
-            Session.Clear();
-            Session.Abandon();
+            Response.Write("Hello");
             Session.Remove("user");
-            Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            Response.Cache.SetNoStore();
             Response.Redirect("Login.aspx");
+        }
+
+        protected void i1_Click1(object sender, EventArgs e)
+        {
 
         }
     }
