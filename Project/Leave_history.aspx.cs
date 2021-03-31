@@ -36,7 +36,7 @@ namespace Project
                     {
                         p1.Visible = false;
                         Panel1.Visible = true;
-                        cmd.CommandText = "select uname, cast(from_date as date) as from_da,cast(to_date as date) as to_da,type_of_leave,stat,descrip from EmpInfo, EmpLeave where EmpInfo.id ='" + id + "' and EmpLeave.id ='" + id + "'";
+                        cmd.CommandText = "select uname,email,cast(from_date as date) as from_da,cast(to_date as date) as to_da,type_of_leave,stat,descrip from EmpInfo, EmpLeave where EmpInfo.id ='" + id + "' and EmpLeave.id ='" + id + "'";
                         SqlDataReader dr = cmd.ExecuteReader();
                         DataTable dt = new DataTable();
                         dt.Load(dr);

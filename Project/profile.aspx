@@ -11,8 +11,8 @@
 
     <asp:Repeater ID="r1" runat="server">
         <ItemTemplate>
-            <div class="card mb-3 bg-white shadow-lg" style=" width: 75%; margin-left: 20%;
-                margin-top: 50px">
+            <div class="text-center container-fluid">
+            <div class="card mb-3 bg-white shadow-lg m-5" >
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="Images/xyz.jpg" alt="...">
@@ -26,7 +26,7 @@
                             <h5 class="card-title">Gender: <%#Eval("gender") %></h5>
                             <asp:Button class="btn btn-lg btn-outline-primary" ID="update" runat="server" OnClick="update_Click"
                                 Text="Update" />
-
+                            </div>
                         </div>
                     </div>
                 </div>

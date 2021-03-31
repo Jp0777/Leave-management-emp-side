@@ -11,8 +11,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="form-floating  container-fluid text-center mt-5 bg-white shadow-lg "
-        style="width: 75%; margin-left: 20%">
+    <div class="conatiner   text-center m-5 bg-white shadow-lg " 
+        >
 
         <asp:Label ID="Label5" runat="server" Text="Apply For Leave" CssClass="text-center"
             Font-Bold="True" Font-Size="XX-Large"> </asp:Label>
