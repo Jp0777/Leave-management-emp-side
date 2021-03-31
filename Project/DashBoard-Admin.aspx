@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid row"  style="width: 75%; margin-left: 20%">
+    <div class="container-fluid row"  >
         
               <div class="card text-white bg-dark  col-5" style="margin:25px;max-height:15rem">
               <div class="card-header">Total Employee</div>

@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
 
-    <div class="container-fluid bg-light" style="width: 75%; margin-left: 20%">
+    <div class="container-fluid bg-light" >
     <table class="table  table-scripted bg-white" style=" margin-left: auto;margin-right: auto;z-index:3;box-shadow:3px 3px 3px #c8c8c8;border:0px solid whitesmoke;border-radius:8px">
   
                 <thead class="thead-dark">
