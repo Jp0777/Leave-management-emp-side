@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container m-5 ">
+    <div class="container m-5">
         <asp:Label ID="i2" runat="server" Font-Size="XX-Large" Text="Your Leave History"
             Font-Bold="true"></asp:Label><br />
         <br />
@@ -12,8 +12,8 @@
             <asp:Label ID="i1" runat="server" Font-Size="x-Large" Text="You haven't applied for any leaves yet."
                 Font-Bold="false"></asp:Label><br />
         </asp:Panel>
-        <asp:Panel runat="server" ID="Panel1" >
-            <table class="table shadow-lg bg-white rounded text-center">
+        <asp:Panel runat="server" ID="Panel1"  HorizontalAlign="center" Font-Size="Medium">
+            <table class="table shadow-lg bg-white rounded text-center"  >
                 <thead class="thead-dark">
 
                     <tr>
