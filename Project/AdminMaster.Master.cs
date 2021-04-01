@@ -27,7 +27,12 @@ namespace LeaveMangaement
 
         protected void ib1_Click(object sender, ImageClickEventArgs e)
         {
-            Panel1.Visible = true;
+            
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Redirect("DropDownList1.SelectedValue");
         }
     }
 }

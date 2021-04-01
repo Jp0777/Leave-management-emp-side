@@ -31,20 +31,21 @@
             <a class="item" href="apply_for_leave.aspx"><img src="https://img.icons8.com/metro/20/ffffff/leave.png"/><br /><br /><h3>Apply For Leave</h3>
             </a>
             <a class="item" href="Leave_history.aspx" ><i class="list alternate outline icon"></i> <h3>Leave History</h3>
-            </a>
+            </a>       
              
         </div>
-        <div class="d-flex flex-row ui medium black fixed button container-fluid justify-content-between">
+
+        <div class="d-flex flex-row ui medium black fixed button justify-content-between">
             <div class="p-2">
-                <img src="https://img.icons8.com/carbon-copy/45/ffffff/menu.png" />
+           <img src="https://img.icons8.com/carbon-copy/45/ffffff/menu.png"/>
             </div>
             <div class="p-2 m-2">
                 <h3>Leave Mangement Web App</h3>
             </div>
             <div class="p-2 ">
                 <asp:Button ID="i1" CssClass="ui large button inverted justify-content-end" runat="server"
-                    Text="Sign Out"
-                    Style="float: right" CausesValidation="false" OnClick="i1_Click"></asp:Button>
+                    Text="Sign Out" 
+                    Style="float: right" CausesValidation="false" OnClick="i1_Click" ></asp:Button>
             </div>
         </div>
 

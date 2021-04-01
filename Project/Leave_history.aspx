@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container m-5">
+    <div class="container-fluid mt-5">
         <asp:Label ID="i2" runat="server" Font-Size="XX-Large" Text="Your Leave History"
             Font-Bold="true"></asp:Label><br />
         <br />

@@ -22,28 +22,39 @@
 
 </head>
 <body>
-    <form id="form1" runat="server" class="">
-      <div class="ui sidebar left demo inverted vertical menu labeled icon ">
+    <form id="form1" runat="server">
+        <div class="ui sidebar left demo inverted vertical menu labeled icon ">
             <br />
-         
-            
+
+
             <a class="item" href="DashBoard-Admin.aspx">
-                <i class="user circle outline icon"></i><h3>Dashboard</h3>
+                <i class="user circle outline icon"></i>
+                <h3>Dashboard</h3>
             </a>
-            
-            <a class="item" href="leaves-list-admin.aspx"><img src="https://img.icons8.com/metro/18/ffffff/leave.png"/><br /><br /><h3>Manage Leaves</h3>
+
+            <a class="item" href="leaves-list-admin.aspx">
+                <img src="https://img.icons8.com/metro/18/ffffff/leave.png" /><br />
+                <br />
+                <h3>Manage Leaves</h3>
             </a>
-            
-            <a class="item" href="Leave_history.aspx" ><i class="list alternate outline icon"></i> <h3>Leave Type</h3>
-            </a>
-          <asp:Panel ID="Panel1" runat="server" Visible="false">
-              <a class="item" href="" style="text-align:left" > <h5>Pending</h5>
-            </a>
-              <a class="item" href="" style="text-align:left" > <h5>Approved</h5>
-            </a>
-              <a class="item" href="" style="text-align:left"> <h5>Denied</h5>
-            </a>
-          </asp:Panel>
+
+            <ul class="item">
+                <li style="list-style:none;">
+
+                    <a class="item" href="pending-list.aspx" style="text-align: left;width:100%" >
+                        <h5>Pending</h5>
+                    </a>
+                    <a class="item" href="Approved-list.aspx" id="a2" style="text-align: left;width:100%">
+                        <h5>Approved</h5>
+                    </a>
+                    <a class="item" href="Denied-list.aspx" id="a3" style="text-align: left;width:100%">
+                        <h5>Denied</h5>
+                    </a>
+                </li>
+
+            </ul>
+
+
         </div>
         <div class="d-flex flex-row ui medium black fixed button container-fluid justify-content-between">
             <div class="p-2">
@@ -67,6 +78,7 @@
             </asp:ContentPlaceHolder>
         </div>
         <script>
+          
             $(".medium").click(function () {
                 $('.ui.sidebar')
                     .sidebar('toggle');
@@ -78,7 +90,7 @@
         </script>
 
     </form>
-   
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <script src="Scripts/bootstrap.bundle.min.js"></script>

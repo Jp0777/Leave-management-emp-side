@@ -17,7 +17,7 @@ namespace Project
 
         }
 
-        [System.Web.Services.WebMethod]
+        
         public  void i1_Click(object sender, EventArgs e)
         {
             Response.Write("Hello");
@@ -27,7 +27,7 @@ namespace Project
 
         protected void i1_Click1(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
