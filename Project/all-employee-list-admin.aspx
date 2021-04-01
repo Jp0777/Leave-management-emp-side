@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid bg-light">
-    <table class="table  table-scripted bg-white" style=" margin-left: auto;margin-right: auto;z-index:3;box-shadow:3px 3px 3px #c8c8c8;border:0px solid whitesmoke;border-radius:8px">
+    <div class="container-fluid bg-light mt-5">
+    <table class="table table-scripted bg-white text-center shadow-lg" >
   
                 <thead class="thead-dark">
                     <tr>
@@ -11,8 +11,7 @@
                         <th scope="col">Email</th>
                         <th scope="col">DOB</th>
                         <th scope="col">Gender</th>
-                        <th scope="col">Contact Number</th>
-                        
+                        <th scope="col">Contact Number</th>       
                     </tr>
                 </thead>
                 <tbody>

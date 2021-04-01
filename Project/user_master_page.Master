@@ -19,8 +19,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="src1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
-
+       
         <div class="ui sidebar left demo inverted vertical menu labeled icon ">
             <br />
          

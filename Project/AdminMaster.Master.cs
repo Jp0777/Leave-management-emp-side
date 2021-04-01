@@ -13,7 +13,7 @@ namespace LeaveMangaement
         {
 
         }
-        protected void b1_Click(object sender, EventArgs e)
+        protected void i1_Click(object sender, EventArgs e)
         {
             Session.Clear();
             Session.Abandon();
@@ -23,6 +23,11 @@ namespace LeaveMangaement
             Response.Cache.SetNoStore();
             Response.Redirect("Login.aspx");
 
+        }
+
+        protected void ib1_Click(object sender, ImageClickEventArgs e)
+        {
+            Panel1.Visible = true;
         }
     }
 }
