@@ -41,7 +41,7 @@ namespace Project
                 string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
-                SqlCommand cmd = new SqlCommand("select count(*) from EmpLeave where '"+From.Text+"' between  from_date and to_date or '"+ To.Text+"' between from_date and to_date and id='" + id + "'", con);
+                SqlCommand cmd = new SqlCommand("select count(*) from EmpLeave where id='" + id + "' and ('" + From.Text+"' between  from_date and to_date or '"+ To.Text+"' between from_date and to_date)", con);
                 con.Open();
                 int exist=(Int32)cmd.ExecuteScalar();
 

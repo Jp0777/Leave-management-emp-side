@@ -11,11 +11,11 @@
 
     <asp:Repeater ID="r1" runat="server">
         <ItemTemplate>
-            <div class="text-left container-fluid">
+            <div class="text-left container">
             <div class="card mb-3 bg-white shadow-lg m-5" >
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="Images/xyz.jpg" alt="...">
+                        <img src="Images/xyz.jpg" alt="..." width="100%" height="100%">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

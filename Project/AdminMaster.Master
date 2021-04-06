@@ -17,77 +17,154 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.0.0.min.js"></script>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+     <style>
+        .sidebar {
+            width: 0;
+            height: 100%;
+            background-color: #111;
+            color: white;
+            top: 0;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+            overflow-x: hidden;
+        }
+
+        #main {
+            transition: all 0.5s ease-in-out;
+        }
+
+        #l1,
+        #l2,
+        #l3,
+        #l4,
+        #l5,
+        #l6{
+            width: 230px;
+            transition: 0.3s;
+        }
+    </style>
+    <script>
+        function funv() {
+            document.getElementById("sidebar").style.width = "230px";
+            document.getElementById("main").style.marginLeft = "230px";
+
+        }
+        function funh() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        function fun1() {
+            document.getElementById("l1").classList.add("bg-success");
+        }
+        function fun2() {
+            document.getElementById("l2").classList.add("bg-success");
+        }
+        function fun3() {
+            document.getElementById("l3").classList.add("bg-success");
+        }
+        function fun4() {
+            document.getElementById("l1").classList.remove("bg-success");
+            document.getElementById("l1").style.backgroundColor = "#111;";
+        } function fun5() {
+            document.getElementById("l2").classList.remove("bg-success");
+            document.getElementById("l2").style.backgroundColor = "#111;";
+        } function fun6() {
+            document.getElementById("l3").classList.remove("bg-success");
+            document.getElementById("l3").style.backgroundColor = "#111;";
+
+        }
+        function fun7() {
+            document.getElementById("l4").classList.add("bg-success");
+ 
 
 
+        }
+        function fun8() {
+            document.getElementById("l4").classList.remove("bg-success");
+            document.getElementById("l4").style.backgroundColor = "#111;";
+
+
+        }
+        function fun9() {
+            document.getElementById("l5").classList.add("bg-success");
+           
+
+
+        }
+        function fun10() {
+            document.getElementById("l5").classList.remove("bg-success");
+            document.getElementById("l5").style.backgroundColor = "#111;";
+
+
+        }
+    </script>
 
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="ui sidebar left demo inverted vertical menu labeled icon ">
-            <br />
-
-
-            <a class="item" href="DashBoard-Admin.aspx">
-                <i class="user circle outline icon"></i>
-                <h3>Dashboard</h3>
-            </a>
-
-            <a class="item" href="leaves-list-admin.aspx">
-                <img src="https://img.icons8.com/metro/18/ffffff/leave.png" /><br />
-                <br />
-                <h3>Manage Leaves</h3>
-            </a>
-
-            <ul class="item">
-                <li style="list-style:none;">
-
-                    <a class="item" href="pending-list.aspx" style="text-align: left;width:100%" >
-                        <h5>Pending</h5>
-                    </a>
-                    <a class="item" href="Approved-list.aspx" id="a2" style="text-align: left;width:100%">
-                        <h5>Approved</h5>
-                    </a>
-                    <a class="item" href="Denied-list.aspx" id="a3" style="text-align: left;width:100%">
-                        <h5>Denied</h5>
-                    </a>
+       <div class=" sidebar" id="sidebar">
+            <a style="margin-top: 10px;" class="btn ms-2" id="closebtn" onclick="funh()">
+                <img
+                    src="https://img.icons8.com/ios-filled/45/ffffff/cancel.png" /></a>
+            <ul class="navbar-nav mt-3 " >
+                <li class="nav-item " >
+                    <a class="nav-link text-white "   href="DashBoard-Admin.aspx" id="l1" onmouseover="fun1()"
+                        onmouseout="fun4()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/material/30/ffffff/dashboard.png"/>
+                        &nbsp;&nbsp;&nbsp;Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white "  href="leaves-list-admin.aspx" id="l2" onmouseover="fun2()"
+                        onmouseout="fun5()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/material/30/ffffff/ingredients-list--v1.png"/>
+                        &nbsp;&nbsp;&nbsp;Manage Leaves</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white "  href="pending-list.aspx" id="l3" onmouseover="fun3()"
+                        onmouseout="fun6()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/windows/32/ffffff/last-24-hours.png"/>
+                        &nbsp;&nbsp;Pending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white "  href="Denied-list.aspx" id="l4" onmouseover="fun7()"
+                        onmouseout="fun8()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/metro/24/ffffff/cancel.png"/>
+                        &nbsp;&nbsp;&nbsp;Denied</a>
+                   </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white "  href="Approved-list.aspx" id="l5" onmouseover="fun9()"
+                        onmouseout="fun10()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/material/30/ffffff/approval.png"/>
+                        &nbsp;&nbsp;Approved</a>
+             
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="l6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="https://img.icons8.com/ios-filled/30/ffffff/logout-rounded.png" />&nbsp;&nbsp;
+                        <asp:Button ID="b1" runat="server"  class="btn  btn-outline-success text-white" Text="Sign Out" OnClick="i1_Click"></asp:Button></a>
                 </li>
 
             </ul>
-
-
-        </div>
-        <div class="d-flex flex-row ui medium black fixed button container-fluid justify-content-between">
-            <div class="p-2">
-                <img src="https://img.icons8.com/carbon-copy/45/ffffff/menu.png" />
-            </div>
-            <div class="p-2 m-2">
-                <h3>Leave Mangement Web App</h3>
-            </div>
-            <div class="p-2 ">
-                <asp:Button ID="i1" CssClass="ui large button inverted justify-content-end" runat="server"
-                    Text="Sign Out"
-                    Style="float: right" CausesValidation="false" OnClick="i1_Click"></asp:Button>
-            </div>
         </div>
 
+        <div id="main">
+            <nav class="navbar navbar-expand-lg  d-flex flex-row justify-content-between" style="background-color: #111;">
+                <div>
+                    <a class="btn" id="btn" onclick="funv()">
+                        <img
+                            src="https://img.icons8.com/ios-filled/30/ffffff/menu--v1.png" /></a>
+                </div>
+                <div>
+                    <a class="navbar-brand  text-white ">Employee
+                    Leave Management</a>
+                </div>
+                <div>
+                </div>
+            </nav>
 
-
-
-        <div class="pusher">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <script>
-          
-            $(".medium").click(function () {
-                $('.ui.sidebar')
-                    .sidebar('toggle');
-            })
-
-
-
-
-        </script>
+       
 
     </form>
 

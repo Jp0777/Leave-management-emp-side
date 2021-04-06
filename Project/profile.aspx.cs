@@ -36,7 +36,7 @@ namespace Project
 
         protected void update_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("update.aspx");
         }
     }
 }

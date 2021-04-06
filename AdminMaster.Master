@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.Master.cs"
+    Inherits="LeaveMangaement.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="ui sidebar left demo inverted vertical menu labeled icon ">
+            <br />
+
+
+            <a class="item" href="DashBoard-Admin.aspx">
+                <i class="user circle outline icon"></i>
+                <h3>Dashboard</h3>
+            </a>
+
+            <a class="item" href="leaves-list-admin.aspx">
+                <img src="https://img.icons8.com/metro/18/ffffff/leave.png" /><br />
+                <br />
+                <h3>Manage Leaves</h3>
+            </a>
+
+            <ul class="item">
+                <li style="list-style:none;">
+
+                    <a class="item" href="pending-list.aspx" style="text-align: left;width:100%" >
+                        <h5>Pending</h5>
+                    </a>
+                    <a class="item" href="Approved-list.aspx" id="a2" style="text-align: left;width:100%">
+                        <h5>Approved</h5>
+                    </a>
+                    <a class="item" href="Denied-list.aspx" id="a3" style="text-align: left;width:100%">
+                        <h5>Denied</h5>
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+        <div class="d-flex flex-row ui medium black fixed button container-fluid justify-content-between">
+            <div class="p-2">
+                <img src="https://img.icons8.com/carbon-copy/45/ffffff/menu.png" />
+            </div>
+            <div class="p-2 m-2">
+                <h3>Leave Mangement Web App</h3>
+            </div>
+            <div class="p-2 ">
+                <asp:Button ID="i1" CssClass="ui large button inverted justify-content-end" runat="server"
+                    Text="Sign Out"
+                    Style="float: right" CausesValidation="false" OnClick="i1_Click"></asp:Button>
+            </div>
+        </div>
+
+
+
+
+        <div class="pusher">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <script>
+          
+            $(".medium").click(function () {
+                $('.ui.sidebar')
+                    .sidebar('toggle');
+            })
+
+
+
+
+        </script>
+
+    </form>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
