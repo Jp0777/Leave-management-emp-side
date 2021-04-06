@@ -9,9 +9,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="text-center col-4" >
 
-            <div class="container text-center mt-5" style="border: 2px solid whitesmoke; background-color: #c8c8c8">
+            <div class=" text-center shadow-lg"  >
                 <br />
                 <br />
                 <h2 class="display-4 text-seondary text-center">Login</h2>
@@ -41,11 +41,11 @@
                 <br />
 
 
-                <asp:Button ID="Login" class=" btn btn-lg btn-outline-primary" runat="server" Text="Login"
+                <asp:Button ID="Login" class=" btn  btn-outline-primary btn-lg btn-block"  runat="server" Text="Login"
                     OnClick="Login_Click" />
-                <asp:Button ID="SignUp" class=" btn btn-lg btn-outline-primary" runat="server" Text="SignUp"
+                <asp:Button ID="SignUp" class=" btn btn-lg btn-outline-primary btn-block" runat="server" Text="SignUp"
                     OnClick="SignUp_Click" CausesValidation="false" />
-                <asp:Button ID="Cancel" class="btn btn-lg btn-outline-primary " runat="server" Text="Cancel" />
+               
 
 
             </div>
