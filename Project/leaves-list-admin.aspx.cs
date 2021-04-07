@@ -19,13 +19,13 @@ namespace LeaveMangaement
             Repeater.DataBind();
 
         }
-       
+
         public DataSet GetData()
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
             {
-                
+
                 con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("select uname,email,from_date,to_date,type_of_leave,stat,descrip,leaveId from EmpInfo, EmpLeave where EmpInfo.id=EmpLeave.id", con);
                 DataSet ds = new DataSet();
@@ -51,6 +51,14 @@ namespace LeaveMangaement
                 con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE EmpLeave SET stat='Denied' where leaveId='" + leaveIdDeny + "'", con);
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = "select id from EmpLeave where leaveId='" + leaveIdDeny + "'";
+                string id = cmd.ExecuteScalar().ToString();
+                cmd.CommandText = "select daysOfLeave from EmpLeave where leaveId='" + leaveIdDeny + "'";
+                int daysOfLeave = Convert.ToInt32(cmd.ExecuteScalar());
+                Response.Write("id:" + id + " , " + daysOfLeave + "");
+                cmd.CommandText = "Update EmpInfo set leftLeaves=leftLeaves + '" + daysOfLeave + "' where id='" + id + "'";
+                cmd.ExecuteNonQuery();
+
             }
         }
         protected void action_Approve_Deny_Click(object sender, EventArgs e)
@@ -59,18 +67,19 @@ namespace LeaveMangaement
             switch (btn.CommandName)
             {
                 case "approveLeave":
-                   string leaveIdApprove=btn.CommandArgument.ToString();
+                    string leaveIdApprove = btn.CommandArgument.ToString();
                     approveLeave_changeStatus(leaveIdApprove);
                     Response.Redirect("leaves-list-admin.aspx");
                     break;
                 case "denyLeave":
-                    string leaveIdDeny=btn.CommandArgument.ToString();
+                    string leaveIdDeny = btn.CommandArgument.ToString();
                     denyLeave_changeStatus(leaveIdDeny);
                     Response.Redirect("leaves-list-admin.aspx");
                     break;
             }
         }
-       
+
+
     }
 }
 

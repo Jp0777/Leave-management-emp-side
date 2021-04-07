@@ -24,10 +24,26 @@ namespace LeaveMangaement
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("select uname,email, from_date,to_date,type_of_leave,stat,descrip,leaveId from EmpInfo, EmpLeave where EmpInfo.id=EmpLeave.id and stat='Denied'", con);
-                DataSet ds = new DataSet();
-                sda.Fill(ds);
-                return ds;
+                SqlCommand cmd = new SqlCommand("select count(*) from EmpLeave where  stat='Denied'", con);
+                if (Convert.ToInt32(cmd.ExecuteScalar()) < 1)
+                {
+                    p1.Visible = true;
+                    Panel1.Visible = false;
+                    return null;
+                }
+                else
+                {
+
+                    p1.Visible = false;
+                    Panel1.Visible = true;
+                    SqlDataAdapter sda = new SqlDataAdapter("select uname,email, from_date,to_date,type_of_leave,stat,descrip,leaveId from EmpInfo, EmpLeave  where EmpInfo.id=EmpLeave.id and stat='Denied'", con);
+                    // cmd.CommandText = "select uname,email,cast(from_date as date) as from_da,cast(to_date as date) as to_da,type_of_leave,stat,descrip from EmpInfo, EmpLeave where EmpInfo.id ='" + id + "' and EmpLeave.id ='" + id + "'";
+                    //SqlDataReader dr = cmd.ExecuteReader();
+                    DataSet ds = new DataSet();
+                    sda.Fill(ds);
+                    return ds;
+                }
+
             }
         }
         //(<%#Eval('uid' %>)

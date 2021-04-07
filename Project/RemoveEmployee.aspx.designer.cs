@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LeaveMangaement
+namespace Project
 {
 
 
-    public partial class pending_list
+    public partial class RemoveEmployee
     {
 
         /// <summary>

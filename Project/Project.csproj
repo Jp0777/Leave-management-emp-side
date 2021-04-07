@@ -95,6 +95,7 @@
     <Content Include="Login.aspx" />
     <Content Include="pending-list.aspx" />
     <Content Include="profile.aspx" />
+    <Content Include="RemoveEmployee.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -298,6 +299,13 @@
       <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveEmployee.aspx.cs">
+      <DependentUpon>RemoveEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveEmployee.aspx.designer.cs">
+      <DependentUpon>RemoveEmployee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sign_up.aspx.cs">
       <DependentUpon>sign_up.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

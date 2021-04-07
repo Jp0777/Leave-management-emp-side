@@ -60,6 +60,10 @@
         <asp:Label ID="i1" runat="server" Text="" ForeColor="red" CssClass="text-center"> </asp:Label><br />
         <br />
 
+        
+        <asp:Label ID="Label7" runat="server" Text="Left Leaves" AssociatedControlID="TextBoxLL" Font-Size="XX-Large"></asp:Label><br />
+        <asp:TextBox class="text-center abc col-4" ID="TextBoxLL" runat="server" TextMode="Number"
+            Font-Size="Larger" ReadOnly="true"></asp:TextBox><br /><br />
 
         <asp:Label ID="Label4" runat="server" Text="Description:" AssociatedControlID="desc"
             Font-Size="XX-Large"></asp:Label><br />

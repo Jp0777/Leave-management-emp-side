@@ -3,6 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container-fluid bg-light mt-5" >
+          <asp:Panel runat="server" ID="p1">
+            <asp:Label ID="i1" runat="server" Font-Size="x-Large" Text="You haven't applied for any leaves yet."
+                Font-Bold="false"></asp:Label>
+            <br />
+        </asp:Panel>
+
+        <asp:Panel runat="server" ID="Panel1"  HorizontalAlign="center" Font-Size="Medium">
     <table class="table  table-scripted bg-white shadow-lg text-center" style=" margin-left: auto;margin-right: auto;z-index:3;box-shadow:3px 3px 3px #c8c8c8;border:0px solid whitesmoke;border-radius:8px">
   
                 <thead class="thead-dark">
@@ -39,5 +46,6 @@
                     
                 </tbody>
             </table>
+            </asp:Panel>
         </div>
 </asp:Content>

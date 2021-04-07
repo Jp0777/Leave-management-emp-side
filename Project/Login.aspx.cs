@@ -38,17 +38,17 @@ namespace Project
                     SqlCommand cmd = new SqlCommand("select  count(*) from EmpInfo where email='" + Email.Text + "' and pass='" + Password.Text + "'", con);
                     con.Open();
                     object userExist = cmd.ExecuteScalar();
-                    if (Convert.ToInt32(userExist) > 0)
-                    {
-                    cmd.CommandText = "select id from EmpInfo where email='" + Email.Text+"'";
+                if (Convert.ToInt32(userExist) > 0)
+                {
+                    cmd.CommandText = "select id from EmpInfo where email='" + Email.Text + "'";
                     string id = (string)cmd.ExecuteScalar();
                     cookie["id"] = id;
-                        Session["user"] = cookie["id"];
-                        Response.Redirect("~/profile.aspx");
+                    Session["user"] = cookie["id"];
+                    Response.Redirect("~/profile.aspx");
 
-                    }
-                    else
-                        Response.Write("Unauth");
+                }
+                else
+                    Label2.Text = "Email id and password doesnt match";
 
 
                 }

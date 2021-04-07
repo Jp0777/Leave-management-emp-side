@@ -24,13 +24,29 @@ namespace LeaveMangaement
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("select uname,email, from_date,to_date,type_of_leave,stat,descrip,leaveId from EmpInfo, EmpLeave  where EmpInfo.id=EmpLeave.id and stat='Approved' ", con);
-                DataSet ds = new DataSet();
-                sda.Fill(ds);
-                return ds;
+                SqlCommand cmd = new SqlCommand("select count(*) from EmpLeave where  stat='Approved'", con);
+                if (Convert.ToInt32(cmd.ExecuteScalar()) < 1)
+                {
+                    p1.Visible = true;
+                    Panel1.Visible = false;
+                    return null;
+                }
+                else
+                {
+
+                    p1.Visible = false;
+                    Panel1.Visible = true;
+                    SqlDataAdapter sda = new SqlDataAdapter("select uname,email, from_date,to_date,type_of_leave,stat,descrip,leaveId from EmpInfo, EmpLeave  where EmpInfo.id=EmpLeave.id and stat='Approved'", con);
+                   
+                    DataSet ds = new DataSet();
+                    sda.Fill(ds);
+                    return ds;
+                }
+
             }
         }
-     
+
+
         protected void approveLeave_changeStatus(string leaveIdApprove)
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
