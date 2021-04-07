@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid bg-light mt-5">
+        <asp:Label ID="i2" runat="server" Font-Size="XX-Large" Text="All Employees"
+            Font-Bold="true"></asp:Label><br /><br />
     <table class="table table-scripted bg-white text-center shadow-lg" >
   
                 <thead class="thead-dark">

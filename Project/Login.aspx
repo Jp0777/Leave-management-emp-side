@@ -20,9 +20,15 @@
             }
             event.preventDefault = true;
         }
+        window.onload = function () {
+            noBack();
+        }
+        function noBack() {
+            window.history.forward();
+        }
     </script>
 </head>
-<body>
+<body onpageshow="if (event.persisted) noBack();">
     <form id="form1" runat="server">
           <div>
 

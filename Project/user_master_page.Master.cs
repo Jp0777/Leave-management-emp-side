@@ -20,8 +20,9 @@ namespace Project
         
         public  void i1_Click(object sender, EventArgs e)
         {
-            Response.Write("Hello");
-            Session.Remove("user");
+           
+            Session["user"]=null;
+          
             Response.Redirect("Login.aspx");
         }
 
