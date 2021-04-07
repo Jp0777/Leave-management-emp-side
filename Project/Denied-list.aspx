@@ -2,12 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container-fluid bg-light mt-5" >
+     <div class="container-fluid  mt-5" >
+          <asp:Label ID="Label1" runat="server"  Font-Size="xx-Large" Text="Denied Leaves"
+                Font-Bold="true"></asp:Label><br />
           <asp:Panel runat="server" ID="p1">
-            <asp:Label ID="i1" runat="server" Font-Size="x-Large" Text="You haven't applied for any leaves yet."
+            <asp:Label ID="i1" runat="server" Font-Size="x-Large" class="mt-5" Text="There are no denied leaves"
                 Font-Bold="false"></asp:Label>
-            <br />
-        </asp:Panel>
+          
+        </asp:Panel><br />
 
         <asp:Panel runat="server" ID="Panel1"  HorizontalAlign="center" Font-Size="Medium">
     <table class="table  table-scripted bg-white shadow-lg text-center" style=" margin-left: auto;margin-right: auto;z-index:3;box-shadow:3px 3px 3px #c8c8c8;border:0px solid whitesmoke;border-radius:8px">

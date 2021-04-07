@@ -2,9 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid bg-light mt-5" >
-         <asp:Panel runat="server" ID="p1">
-            <asp:Label ID="i1" runat="server" Font-Size="x-Large" Text="You haven't applied for any leaves yet."
+    <div class="container-fluid  mt-5" >
+          <asp:Label ID="Label1" runat="server"   Font-Size="xx-Large" Text="Pending Leaves"
+                Font-Bold="true"></asp:Label>
+         <asp:Panel runat="server" ID="p1" >
+            <asp:Label ID="i1" runat="server"   Font-Size="x-Large" Text="There are no pending leaves to be approved or denied."
                 Font-Bold="false"></asp:Label>
             <br />
         </asp:Panel>

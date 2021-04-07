@@ -6,33 +6,34 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-        <div class="container-fluid  mt-5">
-            
+    <div class="container-fluid  mt-5">
+        <asp:Label ID="Label1" runat="server" Font-Size="xx-Large" Text="Approved Leaves"
+            Font-Bold="true"></asp:Label><br />
         <asp:Panel runat="server" ID="p1">
-            <asp:Label ID="i1" runat="server" Font-Size="x-Large" Text="You haven't applied for any leaves yet."
+            <asp:Label ID="i1" runat="server" class="mt-5" Size="x-Large" Text="You haven't applied for any leaves yet."
                 Font-Bold="false"></asp:Label>
             <br />
-        </asp:Panel>
+        </asp:Panel><br />
 
-        <asp:Panel runat="server" ID="Panel1"  HorizontalAlign="center" Font-Size="Medium">
-        <table class="table  table-scripted bg-white shadow-lg">
+        <asp:Panel runat="server" ID="Panel1" HorizontalAlign="center" Font-Size="Medium">
+            <table class="table  table-scripted bg-white shadow-lg">
 
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Employee</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">From Date</th>
-                    <th scope="col">To Date</th>
-                    <th scope="col">Leave type</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Approve</th>
-                    <th scope="col">Deny</th>
-                </tr>
-            </thead>
-            <tbody>
-                <asp:Repeater ID="Repeater1" runat="server">
-                    <itemtemplate>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Employee</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">From Date</th>
+                        <th scope="col">To Date</th>
+                        <th scope="col">Leave type</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Approve</th>
+                        <th scope="col">Deny</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <asp:Repeater ID="Repeater1" runat="server">
+                        <itemtemplate>
             
                     <tr>
                         <td><%#Eval("uname") %></</td>
@@ -47,11 +48,11 @@
                     </tr>
 
         </itemtemplate>
-                </asp:Repeater>
+                    </asp:Repeater>
 
-            </tbody>
-        </table>
-</asp:Panel>
+                </tbody>
+            </table>
+        </asp:Panel>
     </div>
 
 </asp:Content>
